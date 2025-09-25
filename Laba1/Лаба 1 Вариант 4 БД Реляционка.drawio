@@ -1,0 +1,175 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.1.2 Chrome/138.0.7204.243 Electron/37.4.0 Safari/537.36" version="28.1.2">
+  <diagram name="Страница — 1" id="BJcCydQLlPJKZHcG0jiz">
+    <mxGraphModel dx="1114" dy="749" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1D00OTn28_5Agn78taZn-2" value="Предприятие" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="39.5" y="30" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-3" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;size=0.5;" parent="1" vertex="1">
+          <mxGeometry x="229.5" y="35" width="20" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-4" value="Id," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;fontStyle=4" parent="1" vertex="1">
+          <mxGeometry x="229.5" y="35" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-5" value="Название" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="279.5" y="35" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-6" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="339.5" y="35" width="20" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-9" value="Отдел Кадров" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="34.5" y="80" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-10" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="229.5" y="85" width="20" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-11" value="FK:Id предприятия," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="239.5" y="85" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-12" value="Id," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=4" parent="1" vertex="1">
+          <mxGeometry x="319.5" y="85" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-13" value="Телефон," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="373.5" y="85" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-14" value="ФИО начальника" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="433.5" y="85" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-15" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="509.5" y="85" width="20" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-17" value="Вакансия" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="59.5" y="130" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-18" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="229.5" y="135" width="20" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-19" value="FK:Id отдела кадров," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="254.5" y="135" width="75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-20" value="&lt;u&gt;Id&lt;/u&gt;," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="319.5" y="135" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-21" value="ЗП," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="349.5" y="135" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-22" value="Образование," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=default;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="399.5" y="135" width="80.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-23" value="Пол," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;strokeColor=default;" parent="1" vertex="1">
+          <mxGeometry x="489.5" y="135" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-24" value="Должность," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="559.5" y="135" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-25" value="Мин Возраст," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;strokeColor=default;" parent="1" vertex="1">
+          <mxGeometry x="643.5" y="130" width="60.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-26" value="Макс Возраст," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;strokeColor=default;" parent="1" vertex="1">
+          <mxGeometry x="719.5" y="130" width="59.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-27" value="График," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="254.5" y="180" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-28" value="Опыт работы," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="314.5" y="180" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-29" value="Рабочие часы в неделю," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="379.5" y="180" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-30" value="Тип занятости," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="449.5" y="180" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-31" value="Формат Работы," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="515.5" y="180" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-32" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="643.5" y="180" width="20" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-33" value="Клиент" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="74.5" y="230" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-34" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="229.5" y="235" width="20" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-35" value="&lt;u&gt;Id,&lt;/u&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="239.5" y="235" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-36" value="Адрес," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="279.5" y="235" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-37" value="Телефон," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="329.5" y="235" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-38" value="Пол," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="379.5" y="235" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-39" value="Образование," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;strokeColor=default;" parent="1" vertex="1">
+          <mxGeometry x="423.5" y="235" width="86" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-40" value="Дата рождения," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="513.5" y="235" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-41" value="Фамилия," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="650" y="235" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-42" value="Должность," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=default;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="573.5" y="235" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-43" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="807" y="235" width="20" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-47" value="FK: Id предприятия," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="354" y="295" width="85.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-49" value="Последний рабочий день" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=default;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="600" y="292.5" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-50" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="699.5" y="292.5" width="20" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-51" value="Клиент-Вакансия" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="16.75" y="350" width="215.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-52" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="232.25" y="355" width="20" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-53" value="FK:Id клиента," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=4" parent="1" vertex="1">
+          <mxGeometry x="252.25" y="355" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-54" value="FK: Id вакансии" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=4" parent="1" vertex="1">
+          <mxGeometry x="310" y="355" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-55" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="369.5" y="352.5" width="20" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-57" value="Имя," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="700" y="235" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1D00OTn28_5Agn78taZn-58" value="Отчество" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=default;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="747" y="235" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZoTQHLhfo7Nb2i6sTZC_-1" value="Клиент-Предприятие" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry y="290" width="268.25" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZoTQHLhfo7Nb2i6sTZC_-3" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="272.25" y="295" width="20" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZoTQHLhfo7Nb2i6sTZC_-4" value="&lt;u&gt;FK:Id клиента,&lt;/u&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="292.25" y="295" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZoTQHLhfo7Nb2i6sTZC_-5" value="Должность," style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="443.5" y="295" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZoTQHLhfo7Nb2i6sTZC_-6" value="&lt;u&gt;Первый рабочий день,&lt;/u&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="515.5" y="292.5" width="84.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pUK9PkuJt4Sx-pMBpI9T-2" value="Рейтинг вакансии" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="578.5" y="180" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
