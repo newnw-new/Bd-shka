@@ -1,6 +1,6 @@
 CREATE TABLE Clients
 (
-	[Id] INT PRIMARY KEY,
+	[Id] INT IDENTITY(1,1) PRIMARY KEY,
 	[Address] NVARCHAR(50) NOT NULL,
 	[Phone_number] NVARCHAR(12) NOT NULL CHECK(Phone_number LIKE '+7[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
 	OR Phone_number LIKE '8[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
@@ -15,13 +15,13 @@ CREATE TABLE Clients
 
 CREATE TABLE Enterprises
 (
-	[Id] INT PRIMARY KEY,
+	[Id] INT IDENTITY(1,1) PRIMARY KEY,
 	[Name] NVARCHAR(50) NOT NULL
 )
 
 CREATE TABLE HR_departaments
 (
-	[Id] INT PRIMARY KEY,
+	[Id] INT IDENTITY(1,1) PRIMARY KEY,
 	[Id_enterprise] INT NOT NULL FOREIGN KEY REFERENCES Enterprises([Id])
 	ON DELETE CASCADE ON UPDATE CASCADE,
 	[Phone_number] NVARCHAR(12) NOT NULL CHECK(Phone_number LIKE '+7[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
@@ -33,7 +33,7 @@ CREATE TABLE HR_departaments
 
 CREATE TABLE Vacancies
 (
-	[Id] INT PRIMARY KEY,
+	[Id] INT IDENTITY(1,1) PRIMARY KEY,
 	[Id_HR_departament] INT NOT NULL FOREIGN KEY REFERENCES HR_departaments([Id])
 	ON DELETE CASCADE ON UPDATE CASCADE,
 	[Salary] INT NOT NULL CHECK(Salary > 0),
@@ -42,7 +42,7 @@ CREATE TABLE Vacancies
 	[Job_title] NVARCHAR(50) NOT NULL,
 	[MIN_age] TINYINT NULL CHECK (MIN_age > 0),
 	[MAX_age] TINYINT NULL CHECK (MAX_age > 0),
-	[Shedule] NVARCHAR(5) NOT NULL CHECK (Shedule LIKE '[1-30]/[1-30]'),
+	[Shedule] NVARCHAR(5) NOT NULL CHECK (Shedule LIKE '[1-9]/[1-9]' OR Shedule LIKE '[1-2][0-9]/[1-9]' OR Shedule LIKE '[1-9]/[1-2][0-9]' OR Shedule LIKE '[1-2][0-9]/[1-2][0-9]' OR Shedule LIKE '30/30'),
 	[Experience] TINYINT NULL CHECK (Experience > 0),
 	[Hours_per_week] TINYINT NOT NULL CHECK(Hours_per_week > 0 AND Hours_per_week <= 40),
 	[Employment_type] NVARCHAR(50) NOT NULL CHECK (Employment_type in(N'Полная', N'Частичная', N'Вахта')),
@@ -72,11 +72,9 @@ CREATE TABLE Client_Enterprise
 	PRIMARY KEY([Id_client], [First_work_day])
 )
 
-SELECT * FROM Clients
-
-DROP TABLE Clients
-DROP TABLE Enterprises
-DROP TABLE HR_departaments
-DROP TABLE Vacancies
 DROP TABLE Client_Enterprise
 DROP TABLE Client_Vacancy
+DROP TABLE Vacancies
+DROP TABLE HR_departaments
+DROP TABLE Clients
+DROP TABLE Enterprises
