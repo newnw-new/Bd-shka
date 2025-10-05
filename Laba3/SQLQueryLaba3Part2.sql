@@ -6,16 +6,22 @@ FROM Clients AS cl JOIN Vacancies AS vac ON (Cl.Gender = vac.Gender OR vac.Gende
 	AND ((2025 - YEAR(Cl.Birth_date) >= vac.MIN_age OR MIN_age IS NULL) AND (2025 - YEAR(Cl.Birth_date) <= vac.MAX_age OR MAX_age IS NULL))
 
 --b
-
-SELECT TOP 1 WITH TIES Job_title
-FROM Vacancies
-GROUP BY Job_title
-ORDER BY COUNT(Job_title) DESC
---UNION
-SELECT TOP 1 WITH TIES Job_title
-FROM Vacancies
-GROUP BY Job_title
-ORDER BY COUNT(Job_title)
+WITH helpTable AS 
+(
+	SELECT Job_title,
+	COUNT(*) AS Job_count,
+	RANK() OVER(ORDER BY COUNT(*) DESC) AS Row_desc,
+	RANK() OVER(ORDER BY COUNT(*)) AS Row_ask
+	FROM Vacancies
+	GROUP BY Job_title
+)
+SELECT Job_title, 
+	CASE
+		WHEN Row_desc = 1 THEN 'Наиболее'
+		WHEN Row_ask = 1 THEN 'Наименее'
+	END AS [Тип востребованности]
+FROM helpTable
+WHERE Row_ask = 1 OR Row_desc = 1
 
 --c
 SELECT DISTINCT ent.Id, ent.Name
@@ -38,7 +44,7 @@ SELECT EnterpriseName,
 	COUNT(CASE WHEN ClientGender = 'Ж' THEN 1 END) AS [Ж],
 	COUNT(CASE WHEN ClientEducation = 'Высшее профессиональное' THEN 1 END) AS [Высшее обр.],
 	COUNT(CASE WHEN ClientEducation = 'Среднее профессиональное' THEN 1 END) AS [Среднее спец.],
-	COUNT(CASE WHEN 2025 - YEAR(ClientBirth_date) <= 40 THEN 1 END) AS [до 40],
-	COUNT(CASE WHEN 2025 - YEAR(ClientBirth_date) > 40 THEN 1 END) AS [до 40]
+	COUNT(CASE WHEN 2025 - YEAR(ClientBirth_date) <= 40 THEN 1 END) AS [До 40],
+	COUNT(CASE WHEN 2025 - YEAR(ClientBirth_date) > 40 THEN 1 END) AS [После 40]
 FROM EntCeCl
 GROUP BY EnterpriseId, EnterpriseName

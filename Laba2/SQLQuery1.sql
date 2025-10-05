@@ -5,7 +5,7 @@ CREATE TABLE Clients
 	[Phone_number] NVARCHAR(12) NOT NULL CHECK(Phone_number LIKE '+7[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
 	OR Phone_number LIKE '8[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
 	[Gender] NCHAR(1) NOT NULL CHECK(Gender in(N'М', N'Ж')),
-	[Education] NVARCHAR(25) NULL CHECK (Education in(N'Среднее профессиональное', N'Высшее профессиональное')),
+	[Education] NVARCHAR(25) NOT NULL CHECK (Education in(N'Среднее профессиональное', N'Высшее профессиональное')),
 	[Birth_date] DATE NOT NULL,
 	[Job_title] NVARCHAR(50) NULL,
 	[Surname] NVARCHAR(50) NOT NULL,
