@@ -1,6 +1,6 @@
 --a
 --Переделать более точное вычисление возраста и с опытом подумать
-SELECT cl.Surname, cl.Name, cl.Patronim, vac.Job_title, vac.Salary, vac.Education, vac.Gender, vac.MIN_age, vac.MAX_age, vac.Experience, vac.Hours_per_week, vac.Employment_type, vac.Shedule, vac.Work_format
+SELECT cl.Surname, cl.Name, cl.Patronim, vac.Job_title, vac.Salary, vac.Education, vac.Gender, vac.MIN_age, vac.MAX_age, vac.City, vac.Hours_per_week, vac.Employment_type, vac.Shedule, vac.Work_format
 FROM Clients AS cl JOIN Vacancies AS vac ON (Cl.Gender = vac.Gender OR vac.Gender IS NULL) 
 	AND (cl.Education = vac.Education)
 	AND ((2025 - YEAR(Cl.Birth_date) >= vac.MIN_age OR MIN_age IS NULL) AND (2025 - YEAR(Cl.Birth_date) <= vac.MAX_age OR MAX_age IS NULL))
