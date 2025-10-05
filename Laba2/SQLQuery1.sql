@@ -43,7 +43,7 @@ CREATE TABLE Vacancies
 	[MIN_age] TINYINT NULL CHECK (MIN_age > 0),
 	[MAX_age] TINYINT NULL CHECK (MAX_age > 0),
 	[Shedule] NVARCHAR(5) NOT NULL CHECK (Shedule LIKE '[1-9]/[1-9]' OR Shedule LIKE '[1-2][0-9]/[1-9]' OR Shedule LIKE '[1-9]/[1-2][0-9]' OR Shedule LIKE '[1-2][0-9]/[1-2][0-9]' OR Shedule LIKE '30/30'),
-	[Experience] TINYINT NULL CHECK (Experience > 0),
+	[City] NVARCHAR(100) NULL,
 	[Hours_per_week] TINYINT NOT NULL CHECK(Hours_per_week > 0 AND Hours_per_week <= 40),
 	[Employment_type] NVARCHAR(50) NOT NULL CHECK (Employment_type in(N'Полная', N'Частичная', N'Вахта')),
 	[Work_format] NVARCHAR(30) NOT NULL CHECK (Work_format in (N'На месте', N'Удаленно', N'Разъезды')),
