@@ -89,7 +89,7 @@ GROUP BY hr.Id
 SELECT Enterprises.Name, COUNT(HR_departaments.Id_enterprise) AS [Кол-во HR-отделов]
 FROM Enterprises LEFT JOIN HR_departaments ON Enterprises.Id = HR_departaments.Id_enterprise
 GROUP BY Enterprises.Name
-HAVING COUNT(HR_departaments.Id_enterprise) < 2
+HAVING COUNT(HR_departaments.Id_enterprise) < 1
 
 SELECT hr.Id, AVG(vac.Vacancy_rating) AS [Среднее значение рейтинга вакансий]
 FROM HR_departaments AS hr LEFT JOIN Vacancies AS vac ON hr.Id = vac.Id_HR_departament
@@ -98,7 +98,7 @@ HAVING NOT AVG(vac.Vacancy_rating) IS NULL
 
 --2.7 Привести примеры 3-4 вложенных (соотнесенных, c использованием IN, EXISTS) запросов.
 SELECT ent.Name, hr.Phone_number, vac.Job_title, vac.Employment_type
-FROM (Enterprises AS ent JOIN HR_departaments AS hr ON ent.Id = hr.Id_enterprise) JOIN Vacancies AS vac ON hr.Id = vac.Id_HR_departament
+FROM Enterprises AS ent JOIN HR_departaments AS hr ON ent.Id = hr.Id_enterprise JOIN Vacancies AS vac ON hr.Id = vac.Id_HR_departament
 WHERE vac.Employment_type IN('Полная', 'Частичная')
 
 SELECT ent.Name, hr.Phone_number
@@ -113,12 +113,20 @@ WHERE NOT EXISTS(SELECT * FROM Vacancies AS vac WHERE vac.Shedule IN ('6/1', '7/
 --3.1 На основе любых запросов из п. 2 создать два представления (VIEW).
 CREATE VIEW EnterHRdepVacView AS
 SELECT ent.Name, hr.Phone_number, vac.Job_title, vac.Employment_type
-FROM (Enterprises AS ent JOIN HR_departaments AS hr ON ent.Id = hr.Id_enterprise) JOIN Vacancies AS vac ON hr.Id = vac.Id_HR_departament
+FROM Enterprises AS ent JOIN HR_departaments AS hr ON ent.Id = hr.Id_enterprise JOIN Vacancies AS vac ON hr.Id = vac.Id_HR_departament
+
+SELECT * FROM EnterHRdepVacView
+
+DROP VIEW EnterHRdepVacView
 
 CREATE VIEW EnterCountHRdepsView AS
 SELECT Enterprises.Name, COUNT(HR_departaments.Id_enterprise) AS [Кол-во HR-отделов]
 FROM Enterprises LEFT JOIN HR_departaments ON Enterprises.Id = HR_departaments.Id_enterprise
 GROUP BY Enterprises.Name;
+
+SELECT * FROM EnterCountHRdepsView
+
+DROP VIEW EnterCountHRdepsView
 
 --3.2 Привести примеры использования общетабличных выражений (СТЕ) (2-3 запроса)
 WITH With1 (Surname) AS
@@ -130,7 +138,7 @@ SELECT * FROM With1;
 WITH With2 (Salary) AS
 (SELECT Salary
 FROM Vacancies
-WHERE Salary>200
+WHERE Salary>70000
 )
 SELECT * FROM With2
 
