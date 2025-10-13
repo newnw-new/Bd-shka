@@ -39,7 +39,7 @@ SELECT ent.Name, hr.Phone_number, hr.Boss_surname, hr.Boss_name, hr.Boss_patroni
 FROM Enterprises AS ent, HR_departaments AS hr
 WHERE ent.Id = hr.Id_enterprise
 
-SELECT hr.Phone_number, hr.Boss_surname, hr.Boss_name, hr.Boss_patronim, vac.Salary, vac.Education, vac.Gender, vac.Job_title, vac.MIN_age, vac.MAX_age, vac.Shedule, vac.Experience, vac.Hours_per_week, vac.Employment_type, vac.Work_format, vac.Vacancy_rating
+SELECT hr.Phone_number, hr.Boss_surname, hr.Boss_name, hr.Boss_patronim, vac.Salary, vac.Education, vac.Gender, vac.Job_title, vac.MIN_age, vac.MAX_age, vac.Shedule, vac.City, vac.Hours_per_week, vac.Employment_type, vac.Work_format, vac.Vacancy_rating
 FROM Vacancies AS vac, HR_departaments AS hr
 WHERE vac.Id_HR_departament = hr.Id
 
@@ -47,21 +47,21 @@ WHERE vac.Id_HR_departament = hr.Id
 SELECT ent.Name, hr.Phone_number, hr.Boss_surname, hr.Boss_name, hr.Boss_patronim
 FROM Enterprises AS ent JOIN HR_departaments AS hr ON ent.Id = hr.Id_enterprise
 
-SELECT hr.Phone_number, hr.Boss_surname, hr.Boss_name, hr.Boss_patronim, vac.Salary, vac.Education, vac.Gender, vac.Job_title, vac.MIN_age, vac.MAX_age, vac.Shedule, vac.Experience, vac.Hours_per_week, vac.Employment_type, vac.Work_format, vac.Vacancy_rating
+SELECT hr.Phone_number, hr.Boss_surname, hr.Boss_name, hr.Boss_patronim, vac.Salary, vac.Education, vac.Gender, vac.Job_title, vac.MIN_age, vac.MAX_age, vac.Shedule, vac.City, vac.Hours_per_week, vac.Employment_type, vac.Work_format, vac.Vacancy_rating
 FROM Vacancies AS vac JOIN HR_departaments AS hr ON vac.Id_HR_departament = hr.Id
 
 --2.3
 SELECT ent.Name, hr.Phone_number, hr.Boss_surname, hr.Boss_name, hr.Boss_patronim
 FROM Enterprises AS ent LEFT JOIN HR_departaments AS hr ON ent.Id = hr.Id_enterprise
 
-SELECT hr.Phone_number, hr.Boss_surname, hr.Boss_name, hr.Boss_patronim, vac.Salary, vac.Education, vac.Gender, vac.Job_title, vac.MIN_age, vac.MAX_age, vac.Shedule, vac.Experience, vac.Hours_per_week, vac.Employment_type, vac.Work_format, vac.Vacancy_rating
+SELECT hr.Phone_number, hr.Boss_surname, hr.Boss_name, hr.Boss_patronim, vac.Salary, vac.Education, vac.Gender, vac.Job_title, vac.MIN_age, vac.MAX_age, vac.Shedule, vac.City, vac.Hours_per_week, vac.Employment_type, vac.Work_format, vac.Vacancy_rating
 FROM HR_departaments AS hr LEFT JOIN Vacancies AS vac ON vac.Id_HR_departament = hr.Id
 
 --2.4
 SELECT ent.Name, hr.Phone_number, hr.Boss_surname, hr.Boss_name, hr.Boss_patronim
 FROM HR_departaments AS hr RIGHT JOIN Enterprises AS ent ON ent.Id = hr.Id_enterprise
 
-SELECT hr.Phone_number, hr.Boss_surname, hr.Boss_name, hr.Boss_patronim, vac.Salary, vac.Education, vac.Gender, vac.Job_title, vac.MIN_age, vac.MAX_age, vac.Shedule, vac.Experience, vac.Hours_per_week, vac.Employment_type, vac.Work_format, vac.Vacancy_rating
+SELECT hr.Phone_number, hr.Boss_surname, hr.Boss_name, hr.Boss_patronim, vac.Salary, vac.Education, vac.Gender, vac.Job_title, vac.MIN_age, vac.MAX_age, vac.Shedule, vac.City, vac.Hours_per_week, vac.Employment_type, vac.Work_format, vac.Vacancy_rating
 FROM Vacancies AS vac RIGHT JOIN HR_departaments AS hr ON vac.Id_HR_departament = hr.Id
 
 --2.5

@@ -9,7 +9,7 @@ BEGIN
 	SELECT cl.Surname, cl.Name, cl.Patronim, cl.Birth_date, cl.Gender, cl.Education, vac.Name, vac.Job_title, vac.Salary
 	FROM Clients AS cl JOIN EntVac AS vac ON (Cl.Gender = vac.Gender OR vac.Gender IS NULL) 
 	AND (cl.Education = vac.Education)
-	AND ((2025 - YEAR(Cl.Birth_date) >= vac.MIN_age OR MIN_age IS NULL) AND (2025 - YEAR(Cl.Birth_date) <= vac.MAX_age OR MAX_age IS NULL))
+	AND ((Cl.Birth_date >= DATEADD(YEAR, vac.MIN_age, GETDATE()) OR MIN_age IS NULL) AND (Cl.Birth_date <= DATEADD(YEAR, vac.MAX_age, GETDATE()) OR MAX_age IS NULL))
 	AND (SUBSTRING(cl.Address, 0, CHARINDEX(',', cl.Address)) = vac.City OR vac.Work_format IN ('Удаленно', 'Разъезды'))
 END;
 
@@ -82,3 +82,35 @@ DROP PROCEDURE FindVacanciesBiggerAvgSalary
 DROP PROCEDURE AVGSalary
 
 --3 пользовательских функции
+GO
+CREATE FUNCTION func1 (@Salary INT)
+RETURNS INT
+BEGIN
+	DECLARE @Result INT
+	SELECT @Result = COUNT(Id) FROM Vacancies WHERE Salary >= @Salary
+	RETURN @Result
+END
+GO
+PRINT dbo.func1(50000)
+
+DROP FUNCTION dbo.func1
+
+GO
+CREATE FUNCTION func2 (@ClientId INT)
+RETURNS TABLE
+RETURN 
+	SELECT vac.*
+	FROM Clients AS cl JOIN Vacancies AS vac ON (Cl.Gender = vac.Gender OR vac.Gender IS NULL) 
+	AND (cl.Education = vac.Education)
+	AND ((2025 - YEAR(Cl.Birth_date) >= vac.MIN_age OR MIN_age IS NULL) AND (2025 - YEAR(Cl.Birth_date) <= vac.MAX_age OR MAX_age IS NULL))
+	AND (SUBSTRING(cl.Address, 0, CHARINDEX(',', cl.Address)) = vac.City OR vac.Work_format IN ('Удаленно', 'Разъезды'))
+	WHERE cl.Id = @ClientId
+
+GO
+SELECT * FROM dbo.func2(7)
+
+DROP FUNCTION dbo.func2
+
+GO
+
+--Создать 3 триггера
