@@ -107,7 +107,7 @@ WHERE EXISTS(SELECT * FROM Vacancies WHERE Vacancies.Employment_type IN ('Полная
 
 SELECT ent.Name, hr.Phone_number
 FROM Enterprises AS ent JOIN HR_departaments AS hr ON ent.Id = hr.Id_enterprise
-WHERE NOT EXISTS(SELECT * FROM Vacancies AS vac WHERE vac.Shedule IN ('6/1', '7/0', '5/5'))
+WHERE NOT EXISTS(SELECT * FROM Vacancies AS vac WHERE vac.Shedule IN ('6/2', '7/0', '5/5'))
 
 --Представления
 --3.1 На основе любых запросов из п. 2 создать два представления (VIEW).
@@ -185,7 +185,7 @@ WHERE Gender = 'М'
 INTERSECT
 SELECT Surname, Name, Patronim, Birth_date
 FROM Clients
-WHERE YEAR(Birth_date) < 2004
+WHERE YEAR(Birth_date) < 1984
 ORDER BY Birth_date
 
 SELECT Surname, Name, Patronim, Birth_date
@@ -194,7 +194,7 @@ WHERE Gender = 'М'
 EXCEPT
 SELECT Surname, Name, Patronim, Birth_date
 FROM Clients
-WHERE YEAR(Birth_date) < 2004
+WHERE YEAR(Birth_date) < 1984
 ORDER BY Birth_date
 
 --Использование CASE, PIVOT и UNPIVOT.
