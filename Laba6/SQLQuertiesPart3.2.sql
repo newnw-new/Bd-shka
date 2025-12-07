@@ -33,23 +33,9 @@ WHERE MATCH(Client-(Client_match_Vacancy)->Vacancy) AND Vacancy.Education = 'Выс
 
 
 --e
-WITH EntCeCl (EnterpriseId, EnterpriseName, ClientId, ClientGender, ClientEducation, ClientBirth_date) AS 
-(SELECT ent.Id, ent.Name, cl.Id, cl.Gender, cl.Education, cl.Birth_date
-FROM Enterprises AS ent JOIN Client_Enterprise AS ce ON ent.Id = ce.Id_enterpise JOIN Clients AS cl ON cl.Id = ce.Id_client)
-SELECT EnterpriseName,
-	COUNT(ClientId) AS [Кол-во трудоустроенных],
-	COUNT(CASE WHEN ClientGender = 'М' THEN 1 END) AS [М],
-	COUNT(CASE WHEN ClientGender = 'Ж' THEN 1 END) AS [Ж],
-	COUNT(CASE WHEN ClientEducation = 'Высшее профессиональное' THEN 1 END) AS [Высшее обр.],
-	COUNT(CASE WHEN ClientEducation = 'Среднее профессиональное' THEN 1 END) AS [Среднее спец.],
-	COUNT(CASE WHEN DATEADD(YEAR, -40, GETDATE()) <= ClientBirth_date THEN 1 END) AS [До 40],
-	COUNT(CASE WHEN DATEADD(YEAR, -40, GETDATE()) > ClientBirth_date THEN 1 END) AS [После 40]
-FROM EntCeCl
-GROUP BY EnterpriseId, EnterpriseName
-
 SELECT 
     ent.Name AS [Предприятие],
-    COUNT(DISTINCT cl.$node_id) AS [Кол-во трудоустроенных],
+    COUNT(DISTINCT cl.Id) AS [Кол-во трудоустроенных],
     COUNT(CASE WHEN cl.Gender = 'М' THEN 1 END) AS [М],
 	COUNT(CASE WHEN cl.Gender = 'Ж' THEN 1 END) AS [Ж],
 	COUNT(CASE WHEN cl.Education = 'Высшее профессиональное' THEN 1 END) AS [Высшее обр.],

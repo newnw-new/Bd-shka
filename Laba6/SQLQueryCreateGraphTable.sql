@@ -43,7 +43,7 @@ CREATE TABLE Vacancy
 	[Employment_type] NVARCHAR(50) NOT NULL CHECK (Employment_type in(N'Полная', N'Частичная', N'Вахта')),
 	[Work_format] NVARCHAR(30) NOT NULL CHECK (Work_format in (N'На месте', N'Удаленно', N'Разъезды')),
 	[Vacancy_rating] AS (Salary*0.8)/10000+(1/Hours_per_week),
-	CONSTRAINT CK_Age CHECK(MIN_age <= MAX_age)
+	CONSTRAINT CK_Age_Tree CHECK(MIN_age <= MAX_age)
 ) AS NODE
 
 CREATE TABLE HR_departament_belongs_Enterprise AS EDGE
